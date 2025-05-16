@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="script.js" async defer></script>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="card">
+      <div class="container">
+        <h3>Rock Paper Sciccors</h3>
+        <div class="scorerow">
+          <p>round:</p>
+          <p id="round"></p>
+        </div>
+        <div>
+          <div class="scorerow">
+            <p style="font-weight: bold">pcscore:</p>
+            <p id="pcscore"></p>
+          </div>
+          <div class="scorerow">
+            <p style="font-weight: bold">humanscore:</p>
+            <p id="humanscore"></p>
+          </div>
+        </div>
+        <div>
+          <button class="btn" onclick="play()">Play</button>
+          <!-- <input type="text" id="playerInput" placeholder="zadej volbu" /> -->
+          <label>vyber možnost:</label>
+          <select class="select" id="humanSelect">
+            <option value="Rock">Rock</option>
+            <option value="Scissors">Scissors</option>
+            <option value="Paper">Paper</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

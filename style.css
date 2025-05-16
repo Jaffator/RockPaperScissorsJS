@@ -1,0 +1,40 @@
+.btn {
+  font-size: large;
+  padding: 6px 20px;
+  border-radius: 0.2em;
+  border-width: 1px;
+
+  background-color: cornflowerblue;
+  transition: background-color 0.3s;
+}
+.container {
+  padding: -10px;
+  margin-left: -60px;
+}
+.card {
+  width: 400px;
+  height: 300px;
+  margin: 20px;
+  border-radius: 0.4em;
+  background-color: rgb(155, 155, 155);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  font-family: sans-serif;
+}
+.card h4 {
+  margin-top: -5px;
+}
+.card-button:hover {
+  background-color: #45a049;
+}
+.scorerow {
+  display: flex;
+  margin-top: -20px;
+  gap: 10px;
+}
+.select {
+  width: 100px;
+}
