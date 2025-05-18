@@ -10,16 +10,12 @@ function updateScore() {
 function addfce() {
   console.log("ahoj");
   console.log("cau");
-<<<<<<< HEAD
-  console.log("cus");
-  console.log("cusss");
   console.log("cau");
   console.log("cau");
   console.log("cau");
   console.log("cau");
   console.log("cau");
   console.log("cau");
->>>>>>> testing
 }
 function checkwinner() {
   if (humanScore > pcScore) {
