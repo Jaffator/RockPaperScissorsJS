@@ -7,7 +7,9 @@ function updateScore() {
   document.getElementById("humanscore").textContent = humanScore;
   document.getElementById("round").textContent = round + "/5";
 }
-
+function addfce() {
+  console.log("ahoj");
+}
 function checkwinner() {
   if (humanScore > pcScore) {
     alert("Human WIN");
