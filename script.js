@@ -11,6 +11,7 @@ function addfce() {
   console.log("ahoj");
   console.log("cau");
   console.log("cus");
+  console.log("cusss");
 }
 function checkwinner() {
   if (humanScore > pcScore) {
