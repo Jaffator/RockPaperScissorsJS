@@ -9,13 +9,7 @@ function updateScore() {
 }
 function addfce() {
   console.log("ahoj");
-  console.log("cau");
-  console.log("cau");
-  console.log("cau");
-  console.log("cau");
-  console.log("cau");
-  console.log("cau");
-  console.log("cau");
+  console.log("hovno");
 }
 function checkwinner() {
   if (humanScore > pcScore) {
