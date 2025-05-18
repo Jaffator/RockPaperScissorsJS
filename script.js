@@ -9,6 +9,7 @@ function updateScore() {
 }
 function addfce() {
   console.log("ahoj");
+  console.log("cau");
 }
 function checkwinner() {
   if (humanScore > pcScore) {
