@@ -24,7 +24,7 @@ function checkwinner() {
   } else if (humanScore < pcScore) {
     winner = "PC WIN";
   } else {
-    winner = "plichta";
+    winner = "DRAW";
   }
   playtext.textContent = winner;
   humanScore = 0;
