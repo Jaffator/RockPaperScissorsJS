@@ -2,6 +2,15 @@ let humanScore = 0;
 let pcScore = 0;
 let round = 0;
 
+const rock = document.querySelector("#rock");
+const sciccors = document.querySelector("#scissors");
+const paper = document.querySelector("#paper");
+const playtext = document.querySelector("#playtext");
+
+rock.addEventListener("click", () => play("rock"));
+sciccors.addEventListener("click", () => play("scissors"));
+paper.addEventListener("click", () => play("paper"));
+
 function updateScore() {
   document.getElementById("pcscore").textContent = pcScore;
   document.getElementById("humanscore").textContent = humanScore;
@@ -9,13 +18,15 @@ function updateScore() {
 }
 
 function checkwinner() {
+  let winner = "";
   if (humanScore > pcScore) {
-    alert("Human WIN");
+    winner = "Human WIN";
   } else if (humanScore < pcScore) {
-    alert("PC WIN");
+    winner = "PC WIN";
   } else {
-    alert("plichta");
+    winner = "plichta";
   }
+  playtext.textContent = winner;
   humanScore = 0;
   pcScore = 0;
   round = 0;
@@ -23,10 +34,7 @@ function checkwinner() {
 
 function playRound(humanChoice, pcChoice) {
   round++;
-  if (round > 5) {
-    checkwinner();
-    return;
-  }
+
   if (humanChoice == "paper" && pcChoice == "paper") {
     return "Same choice, no winner";
   } else if (humanChoice == "paper" && pcChoice == "rock") {
@@ -54,10 +62,10 @@ function playRound(humanChoice, pcChoice) {
   }
 }
 
-function getHumanChoice() {
-  const input = document.getElementById("humanSelect").value;
-  return input.toLowerCase();
-}
+// function getHumanChoice(input) {
+//   const input = document.getElementById("humanSelect").value;
+
+//   console.log(input.toLowerCase());
 
 function getPcChoice() {
   const choice = ["Rock", "Paper", "Scissors"];
@@ -65,12 +73,21 @@ function getPcChoice() {
   return choice[randomNumber].toLowerCase();
 }
 
-function play() {
-  const humanChoice = getHumanChoice();
-  console.log(humanChoice);
+function play(humanChoice) {
   const pcChoice = getPcChoice();
+  const container = document.querySelector("#pcChoice");
+  const existpctext = document.querySelector("#pcChoice p");
+  if (existpctext) {
+    container.removeChild(existpctext);
+  }
+  const pctext = document.createElement("p");
+  pctext.textContent = "pc: " + pcChoice;
+  container.appendChild(pctext);
   const result = playRound(humanChoice, pcChoice);
-  alert(result);
   updateScore();
+  playtext.textContent = result;
+  if (round == 5) {
+    checkwinner();
+  }
 }
 updateScore();
