@@ -31,7 +31,7 @@ function checkwinner() {
   pcScore = 0;
   round = 0;
 }
-function ahoj() {
+function cahoj() {
   console.log("nic nedelam");
 }
 function playRound(humanChoice, pcChoice) {
