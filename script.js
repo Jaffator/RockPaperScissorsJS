@@ -31,7 +31,7 @@ function checkwinner() {
   pcScore = 0;
   round = 0;
 }
-function cahoj() {
+function asahoj() {
   console.log("nic nedelam");
 }
 function playRound(humanChoice, pcChoice) {
@@ -42,7 +42,7 @@ function playRound(humanChoice, pcChoice) {
   } else if (humanChoice == "paper" && pcChoice == "rock") {
     humanScore++;
     return "Paper beat rock, human win";
-  } else if (humanChoice == "paper" && pcChoice == "scissors") {
+  } else if (humanChoice == "paper" && pcChoice == "scissors") 
     pcScore++;
     return "Scissors cut paper, pc win";
   } else if (humanChoice == "rock" && pcChoice == "paper") {
